@@ -1,5 +1,4 @@
 import { CopyBlock, dracula } from 'react-code-blocks';
-import { subscribe, dispatch } from '../scoped-observer';
 
 const QuickStart = () => {
   return (
@@ -8,9 +7,10 @@ const QuickStart = () => {
         <h1 className="text-4xl font-bold mb-10">Quick Start</h1>
 
         <p className="mb-6 text-lg">
-          Scoped observer provides a lightweight, event-driven system for
-          component communication in React applications. This section covers the
-          basic setup and usage to get you started quickly.
+          Scoped Observer provides a lightweight, event-driven system for
+          component communication in frontend applications. This section covers
+          the basic setup and usage, helping you get started quickly, whether
+          you're using React, Vue, Svelte, or any other JavaScript framework.
         </p>
 
         <h2 className="text-2xl font-semibold mb-4 mt-12">Installation</h2>
@@ -32,40 +32,24 @@ const QuickStart = () => {
           <CopyBlock
             text={`import { subscribe, dispatch } from '../scoped-observer'
               
-const unsubscribe = subscribe('USER_LOGGED_IN', (payload) => {
-  console.log('User logged in:', payload);
-})
+  const unsubscribe = subscribe({
+    eventName: 'eventName',
+    callback(data) {
+      console.log(data);
+    },
+  });
 
-dispatch('USER_LOGGED_IN', { userId: 1 })
+  dispatch({
+    eventName: 'eventName',
+    payload: 'somePayloadData',
+  });
 
-unsubscribe()
+  unsubscribe()
 `}
             language={'js'}
             theme={dracula}
           />
         </div>
-
-        <h2 className="text-2xl font-semibold mb-4 mt-12">Core Methods</h2>
-        <ul className="list-disc pl-6 text-base space-y-2">
-          <li>
-            <code className="bg-gray-100 px-1 rounded text-black">
-              subscribe(eventName, callback)
-            </code>{' '}
-            — Listens to an event with the given name.
-          </li>
-          <li>
-            <code className="bg-gray-100 px-1 rounded text-black">
-              dispatch(eventName, payload)
-            </code>{' '}
-            — Emits an event with an optional payload.
-          </li>
-          <li>
-            <code className="bg-gray-100 px-1 rounded text-black">
-              unsubscribe(eventName, callback)
-            </code>{' '}
-            — Removes a specific listener from an event.
-          </li>
-        </ul>
       </div>
     </section>
   );

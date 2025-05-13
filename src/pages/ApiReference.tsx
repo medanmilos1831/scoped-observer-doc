@@ -6,7 +6,7 @@ const ApiReference = () => {
       <h1 className="text-4xl font-bold mb-8">API Reference</h1>
 
       <p className="text-lg mb-10">
-        Here’s a complete overview of the available methods in Scoped observer.
+        Here’s a complete overview of the available methods in Scoped Observer.
         These methods help you manage event-based communication across your
         application.
       </p>
@@ -44,6 +44,10 @@ unsubscribe();
 
         <h3 className="text-2xl font-semibold mt-10 mb-4">Parameters</h3>
         <ul className="list-disc pl-6 mb-6">
+          <li>
+            <strong>scope</strong> (optional, string): Defines the event scope.
+            Defaults to the global scope if not provided.
+          </li>
           <li>
             <strong>eventName</strong> (string): The name of the event to
             subscribe to.
@@ -91,11 +95,15 @@ dispatch({
         <h3 className="text-2xl font-semibold mt-10 mb-4">Parameters</h3>
         <ul className="list-disc pl-6 mb-6">
           <li>
+            <strong>scope</strong> (optional, string): Defines the event scope.
+            Defaults to the global scope if not specified.
+          </li>
+          <li>
             <strong>eventName</strong> (string): The name of the event to
             dispatch.
           </li>
           <li>
-            <strong>payload</strong> (optional object): Additional data to send
+            <strong>payload</strong> (optional, object): Additional data to send
             with the event.
           </li>
         </ul>

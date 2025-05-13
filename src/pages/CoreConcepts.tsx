@@ -138,12 +138,14 @@ unsubscribe();
 
 // Component 1: Open Modal
 dispatch({
+  scope: 'modalScope',
   eventName: 'openModal',
   payload: { content: 'Hello, world!' },
 });
 
 // Component 2: Modal Listener
 subscribe({
+  scope: 'modalScope',
   eventName: 'openModal',
   callback({ payload }) {
     console.log('Modal opened with content:', payload.content);

@@ -5,26 +5,27 @@ const Introduction = () => {
     <div className="text-white p-8">
       <h1 className="text-4xl font-bold mb-6">Introduction</h1>
       <p className="mb-6 leading-relaxed">
-        Welcome to Scoped observer — a lightweight, event-driven library
-        designed to make communication between your components clean, scalable,
-        and decoupled. Traditional React apps often struggle with passing data
-        through deeply nested structures or managing scattered UI states. Event
-        Pulse solves this by introducing a simple event-based communication
-        model. No need for heavy global state managers, prop drilling, or
-        boilerplate setups. Just events — clean and scoped.
+        Welcome to Scoped Observer — a lightweight, event-driven library
+        designed to make communication between parts of your application clean,
+        scalable, and decoupled. Scoped Observer introduces a flexible, scoped
+        event system that works in any frontend environment — whether you're
+        using React, Vue, vanilla JavaScript, or anything in between. No need
+        for bulky global state managers, complex data flows, or
+        boilerplate-heavy setups. Just events — clean, scoped, and intuitive.
       </p>
 
       <img src={graph} className="mb-10" />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Why Scoped observer?
+        Why Scoped Observer?
       </h2>
       <p className="mb-6 leading-relaxed">
-        Unlike traditional state management libraries like Redux, MobX, or even
-        Context-heavy solutions, Scoped observer is based purely on an
-        event-driven architecture. This allows components to listen and react to
-        changes without being tightly coupled or burdened by global providers or
-        massive stores.
+        Unlike traditional state management libraries like Redux, MobX, or
+        context-based solutions tied to specific frameworks, Scoped Observer is
+        built on a pure event-driven architecture. This allows different parts
+        of your application to communicate seamlessly without tight coupling,
+        global providers, or bloated state containers. It works with any
+        frontend stack — React, Vue, Svelte, or even plain JavaScript.
       </p>
 
       <section className="mt-10">
