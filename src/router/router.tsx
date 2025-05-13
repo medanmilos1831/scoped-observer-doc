@@ -7,6 +7,17 @@ import { ApiReference } from '../pages/ApiReference';
 import { AdvancedTopics } from '../pages/AdvancedTopics';
 import { Examples } from '../pages/Examples';
 import { OverlayExample } from '../pages/examples/index';
+import { PropsWithChildren } from 'react';
+
+const ScrollContainer = ({ children }: PropsWithChildren) => {
+  return (
+    <>
+      <ScrollProvider.Container>
+        <div className="px-16 h-full">{children}</div>
+      </ScrollProvider.Container>
+    </>
+  );
+};
 
 export const router = () =>
   createBrowserRouter(
@@ -72,7 +83,7 @@ export const router = () =>
                 >
                   Advanced Topics
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   to="/examples"
                   className={({ isActive }) =>
                     `text-white no-underline hover:text-gray-300 ${
@@ -81,16 +92,12 @@ export const router = () =>
                   }
                 >
                   Examples
-                </NavLink>
+                </NavLink> */}
               </div>
 
               <div className="w-4/5 relative h-full">
                 <ScrollProvider>
-                  <ScrollProvider.Container>
-                    <div className="px-16">
-                      <Outlet />
-                    </div>
-                  </ScrollProvider.Container>
+                  <Outlet />
                 </ScrollProvider>
               </div>
             </div>
@@ -99,38 +106,62 @@ export const router = () =>
         children: [
           {
             index: true,
-            element: <Introduction />,
+            element: (
+              <ScrollContainer>
+                <Introduction />
+              </ScrollContainer>
+            ),
           },
           {
             path: '/quick-start',
-            element: <QuickStart />,
+            element: (
+              <ScrollContainer>
+                <QuickStart />
+              </ScrollContainer>
+            ),
           },
           {
             path: '/core',
-            element: <CoreConcepts />,
+            element: (
+              <ScrollContainer>
+                <CoreConcepts />
+              </ScrollContainer>
+            ),
           },
           {
             path: '/api-reference',
-            element: <ApiReference />,
+            element: (
+              <ScrollContainer>
+                <ApiReference />
+              </ScrollContainer>
+            ),
           },
           {
             path: '/advanced-topics',
-            element: <AdvancedTopics />,
+            element: (
+              <ScrollContainer>
+                <AdvancedTopics />
+              </ScrollContainer>
+            ),
           },
-          {
-            path: '/examples',
-            element: <Outlet />,
-            children: [
-              {
-                index: true,
-                element: <Examples />,
-              },
-              {
-                path: 'overlay',
-                element: <OverlayExample />,
-              },
-            ],
-          },
+          // {
+          //   path: '/examples',
+          //   element: (
+          //     <ScrollContainer>
+          //       <Outlet />
+          //     </ScrollContainer>
+          //   ),
+          //   children: [
+          //     {
+          //       index: true,
+          //       element: <Examples />,
+          //     },
+          //     {
+          //       path: 'overlay',
+          //       element: <OverlayExample />,
+          //     },
+          //   ],
+          // },
         ],
       },
     ],
