@@ -1,9 +1,9 @@
 {
-  "name": "events-pulse",
+  "name": "scoped-observer",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "./src",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project events-pulse --web",
+  "// targets": "to see all targets run: nx show project scoped-observer --web",
   "targets": {}
 }
