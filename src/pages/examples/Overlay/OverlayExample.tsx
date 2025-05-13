@@ -12,22 +12,22 @@ const OverlayExample = () => {
 
         <p className="text-lg mb-6">
           In this example, we'll build a simple **Overlay Service** (for modals,
-          drawers, etc.) using Event Pulse. Thanks to the event-driven design,
-          we can open and close overlays across the app, completely decoupled
-          from the component tree.
+          drawers, etc.) using Scoped observer. Thanks to the event-driven
+          design, we can open and close overlays across the app, completely
+          decoupled from the component tree.
         </p>
 
         <h2 className="text-3xl font-semibold mb-8">1. The Concept</h2>
         <p className="mb-6">
           The **OverlayManager** manages different overlay types (like modals
-          and drawers) and uses Event Pulse to dispatch "on" and "off" events.
-          Each overlay is controlled via a scope, allowing clean and isolated
-          event communication.
+          and drawers) and uses Scoped observer to dispatch "on" and "off"
+          events. Each overlay is controlled via a scope, allowing clean and
+          isolated event communication.
         </p>
 
         <CopyBlock
           language="tsx"
-          text={`import { dispatch } from 'event-pulse';
+          text={`import { dispatch } from 'scoped-observer';
 import { ON_OFF_ENTITIES, STATUS_ENUM } from './types';
 
 class OnOffEntity {
@@ -93,7 +93,7 @@ export const overlayManager = new OverlayManager().scope;
           text={`import { JSX, useEffect, useRef, useState } from 'react';
 import { STATUS_ENUM } from './types';
 import { overlayManager } from './OverlayManager';
-import { subscribe } from 'event-pulse';
+import { subscribe } from 'scoped-observer';
 
 export const OverlayController = ({
   children,

@@ -6,9 +6,9 @@ const CoreConcepts = () => {
       <h1 className="text-4xl font-bold mb-8">Core Concepts</h1>
 
       <p className="text-lg mb-6">
-        Event Pulse is designed around a simple event-driven model that helps
-        manage communication between components. Here’s an overview of the core
-        concepts to get you started with using Event Pulse in your app.
+        Scoped observer is designed around a simple event-driven model that
+        helps manage communication between components. Here’s an overview of the
+        core concepts to get you started with using Scoped observer in your app.
       </p>
 
       <div className="mb-12">
@@ -22,7 +22,7 @@ const CoreConcepts = () => {
 
         <CopyBlock
           language="tsx"
-          text={`import { subscribe } from 'event-pulse';
+          text={`import { subscribe } from 'scoped-observer';
 
 // Inside your component
 const unsubscribe = subscribe({
@@ -52,7 +52,7 @@ unsubscribe();
 
         <CopyBlock
           language="tsx"
-          text={`import { dispatch } from 'event-pulse';
+          text={`import { dispatch } from 'scoped-observer';
 
 // Trigger an event
 dispatch({
@@ -68,13 +68,13 @@ dispatch({
       <div className="mb-12">
         <h2 className="text-3xl font-semibold mb-4">3. Event Payload</h2>
         <p className="mb-6">
-          Events in Event Pulse can carry data via a payload, which allows for
-          more dynamic and flexible events.
+          Events in Scoped observer can carry data via a payload, which allows
+          for more dynamic and flexible events.
         </p>
 
         <CopyBlock
           language="tsx"
-          text={`import { subscribe, dispatch } from 'event-pulse';
+          text={`import { subscribe, dispatch } from 'scoped-observer';
 
 // Subscribe to a modal event
 subscribe({
@@ -125,16 +125,16 @@ unsubscribe();
 
       <div className="mb-12">
         <h2 className="text-3xl font-semibold mb-4">
-          5. Example of Event Pulse in Action
+          5. Example of Scoped observer in Action
         </h2>
         <p className="mb-6">
-          Here’s a simple example of how you might use Event Pulse to open and
-          close a modal across your app.
+          Here’s a simple example of how you might use Scoped observer to open
+          and close a modal across your app.
         </p>
 
         <CopyBlock
           language="tsx"
-          text={`import { subscribe, dispatch } from 'event-pulse';
+          text={`import { subscribe, dispatch } from 'scoped-observer';
 
 // Component 1: Open Modal
 dispatch({
@@ -157,7 +157,7 @@ subscribe({
 
       <p className="mt-12 text-lg">
         By understanding and using these core concepts, you can begin leveraging
-        Event Pulse to create a more scalable and maintainable event-driven
+        Scoped observer to create a more scalable and maintainable event-driven
         architecture in your React applications.
       </p>
     </div>

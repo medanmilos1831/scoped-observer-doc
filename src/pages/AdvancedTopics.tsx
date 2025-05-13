@@ -8,7 +8,7 @@ const AdvancedTopics = () => {
       </h1>
 
       <p className="text-lg mb-6">
-        Event Pulse provides advanced mechanisms like scopes and event
+        Scoped observer provides advanced mechanisms like scopes and event
         interceptors to fine-tune your application's event flow. Scopes help
         isolate events to specific parts of your app, while interceptors allow
         you to modify event data before it reaches subscribers.
@@ -26,7 +26,7 @@ const AdvancedTopics = () => {
 
       <CopyBlock
         language="tsx"
-        text={`import { subscribe, dispatch } from 'event-pulse';
+        text={`import { subscribe, dispatch } from 'scoped-observer';
 
 // Subscribe to user profile updates
 subscribe({
@@ -59,7 +59,7 @@ dispatch({
 
       <CopyBlock
         language="tsx"
-        text={`import { subscribe, dispatch } from 'event-pulse';
+        text={`import { subscribe, dispatch } from 'scoped-observer';
 
 // Subscribe to a nested scope
 subscribe({
@@ -88,7 +88,7 @@ dispatch({
 
       <CopyBlock
         language="tsx"
-        text={`import { subscribe, dispatch } from 'event-pulse';
+        text={`import { subscribe, dispatch } from 'scoped-observer';
 
 // User profile subscriber
 subscribe({
@@ -140,7 +140,7 @@ dispatch({
 
       <CopyBlock
         language="tsx"
-        text={`import { subscribe, dispatch, eventInterceptor } from 'event-pulse';
+        text={`import { subscribe, dispatch, eventInterceptor } from 'scoped-observer';
 
 // Interceptor modifying event data
 eventInterceptor({
@@ -181,7 +181,7 @@ dispatch({
 
       <CopyBlock
         language="tsx"
-        text={`import { subscribe, dispatch, eventInterceptor } from 'event-pulse';
+        text={`import { subscribe, dispatch, eventInterceptor } from 'scoped-observer';
 
 // Scoped interceptor
 eventInterceptor({

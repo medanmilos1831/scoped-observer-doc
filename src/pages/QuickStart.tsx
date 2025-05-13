@@ -8,14 +8,14 @@ const QuickStart = () => {
         <h1 className="text-4xl font-bold mb-10">Quick Start</h1>
 
         <p className="mb-6 text-lg">
-          Event Pulse provides a lightweight, event-driven system for component
-          communication in React applications. This section covers the basic
-          setup and usage to get you started quickly.
+          Scoped observer provides a lightweight, event-driven system for
+          component communication in React applications. This section covers the
+          basic setup and usage to get you started quickly.
         </p>
 
         <h2 className="text-2xl font-semibold mb-4 mt-12">Installation</h2>
         <p className="text-base mb-6">
-          Event Pulse is a standalone service. No installation is required.
+          Scoped observer is a standalone service. No installation is required.
           Simply copy the service code into your project.
         </p>
 
@@ -30,7 +30,7 @@ const QuickStart = () => {
 
         <div className="rounded-lg mb-8 text-sm overflow-x-auto">
           <CopyBlock
-            text={`import { subscribe, dispatch } from '../event-pulse'
+            text={`import { subscribe, dispatch } from '../scoped-observer'
               
 const unsubscribe = subscribe('USER_LOGGED_IN', (payload) => {
   console.log('User logged in:', payload);

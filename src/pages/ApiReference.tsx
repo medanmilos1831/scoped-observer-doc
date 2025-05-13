@@ -6,7 +6,7 @@ const ApiReference = () => {
       <h1 className="text-4xl font-bold mb-8">API Reference</h1>
 
       <p className="text-lg mb-10">
-        Here’s a complete overview of the available methods in Event Pulse.
+        Here’s a complete overview of the available methods in Scoped observer.
         These methods help you manage event-based communication across your
         application.
       </p>
@@ -25,7 +25,7 @@ const ApiReference = () => {
 
         <CopyBlock
           language="tsx"
-          text={`import { subscribe } from 'event-pulse';
+          text={`import { subscribe } from 'scoped-observer';
 
 // Inside your component
 const unsubscribe = subscribe({
@@ -76,7 +76,7 @@ unsubscribe();
 
         <CopyBlock
           language="tsx"
-          text={`import { dispatch } from 'event-pulse';
+          text={`import { dispatch } from 'scoped-observer';
 
 // Trigger an event
 dispatch({
