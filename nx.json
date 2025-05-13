@@ -40,7 +40,7 @@
       }
     }
   ],
-  "defaultProject": "scoped-observer",
+  "defaultProject": "scoped-observer-doc",
   "generators": {
     "@nx/react": {
       "application": {

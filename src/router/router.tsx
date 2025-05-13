@@ -135,6 +135,6 @@ export const router = () =>
       },
     ],
     {
-      basename: '/scoped-observer',
+      basename: '/scoped-observer-doc',
     }
   );
