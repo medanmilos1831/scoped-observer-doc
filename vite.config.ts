@@ -6,7 +6,7 @@ import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 
 export default defineConfig(() => ({
   root: __dirname,
-  cacheDir: './node_modules/.vite//scoped-observer-doc',
+  cacheDir: './node_modules/.vite/scoped-observer',
   server: {
     port: 4200,
     host: 'localhost',
