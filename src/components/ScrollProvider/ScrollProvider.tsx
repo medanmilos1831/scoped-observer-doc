@@ -1,4 +1,11 @@
-import { PropsWithChildren, useContext, useState } from 'react';
+import {
+  JSX,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from 'react';
 import { useScrollClient, useScrollWatch } from './hooks';
 import { ScrollContext } from './ScrollContext';
 import { ScrollService } from './ScrollService';
@@ -31,6 +38,11 @@ const ScrollProvider = ({
   function init() {
     return new ScrollService(config);
   }
+  useEffect(() => {
+    return () => {
+      state.scrollTo(0, 'instant');
+    };
+  });
 
   return (
     <ScrollContext.Provider value={state}>

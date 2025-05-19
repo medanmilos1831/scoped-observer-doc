@@ -12,9 +12,11 @@ import { PropsWithChildren } from 'react';
 const ScrollContainer = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <ScrollProvider.Container>
-        <div className="px-16 h-full">{children}</div>
-      </ScrollProvider.Container>
+      <ScrollProvider>
+        <ScrollProvider.Container>
+          <div className="px-16 h-full">{children}</div>
+        </ScrollProvider.Container>
+      </ScrollProvider>
     </>
   );
 };
