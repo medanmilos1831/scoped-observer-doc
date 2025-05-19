@@ -15,8 +15,11 @@ const QuickStart = () => {
 
         <h2 className="text-2xl font-semibold mb-4 mt-12">Installation</h2>
         <p className="text-base mb-6">
-          Scoped observer is a standalone service. No installation is required.
-          Simply copy the service code into your project.
+          <CopyBlock
+            text={`npm i scoped-observer `}
+            language={'js'}
+            theme={dracula}
+          />
         </p>
 
         <h2 className="text-2xl font-semibold mb-4 mt-12">Basic Usage</h2>
